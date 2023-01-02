@@ -1,33 +1,11 @@
-// index.js that uses generates sqlite3 database and uses sequelize to connect to it\
-
-const express = require('express');
+const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('sqlite:./db/database.sqlite');
 
-const User = sequelize.define('user', {
-    name: Sequelize.STRING,
-    email: Sequelize.STRING,
-    password: Sequelize.STRING
-});
+const getRoutes = require("./src/routes");
 
-sequelize.sync().then(() => {
-    User.create({
-        name: 'John',
-        email: 'test@test.com',	
-        password : 'test'
-    });
-});
+getRoutes(app);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+const portConfig = require("./src/config/port.config");
+const consoleMessage = require("./src/utils/consoleMessage");
 
-app.get('/', (req, res) => {
-    res.send('Hello MNS');
-});
-
-app.listen(3002, () => {
-    console.log('App listening on port 3002!');
-});
-
+app.listen(portConfig, consoleMessage(portConfig));
