@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database.config');
 
 module.exports = sequelize.define(
-  'list',
+  'card',
   {
     id: {
       allowNull: false,
@@ -18,7 +18,11 @@ module.exports = sequelize.define(
         is: /^.{1,}$/,
       },
     },
-    user_id: {
+    author_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    edited_by_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
