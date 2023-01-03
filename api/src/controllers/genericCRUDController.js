@@ -15,7 +15,13 @@ exports.getOne = (model) => (req, res) => {
  
     model.findByPk(id)
      .then((object) => {
-       res.json(object);
+      if (object) {
+        res.json(object);
+      } else {
+        res.status(404).json({
+          message: `The object you are trying to get does not exist! (id: ${id})`,
+        });
+      }
      })
      .catch((error) => {
        res.status(500).json({

@@ -1,7 +1,6 @@
 const UserModel = require('../models/user.model');
 const genericCRUDController = require('./genericCRUDController');
 const userServices = require('../services/userService');
-const bcrypt = require('bcryptjs');
 
 exports.register = async (req, res) => {
     const userExists = await userServices.userExists(req.body.email);
@@ -55,3 +54,6 @@ exports.login = (req, res) => {
 };
 
 exports.getAll = genericCRUDController.getAll(UserModel);
+exports.getOne = genericCRUDController.getOne(UserModel);
+exports.patch = genericCRUDController.patch(UserModel, 'user');
+exports.delete = genericCRUDController.delete(UserModel, 'user');
