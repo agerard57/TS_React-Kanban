@@ -13,11 +13,11 @@ const User = sequelize.define('user', {
 });
 
 sequelize.sync().then(() => {
-  User.create({
-    name: 'John',
-    email: 'test@test.com',
-    password: 'test',
-  });
+  // User.create({
+  //   name: 'John',
+  //   email: 'test@test.com',
+  //   password: 'test',
+  // });
 });
 
 module.exports = sequelize;
