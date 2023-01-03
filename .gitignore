@@ -42,3 +42,6 @@ jspm_packages
 
 # excluding database
 *.sqlite
+
+# ignore lock files
+*.lock
