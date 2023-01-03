@@ -36,7 +36,7 @@ exports.getOne = (model) => (req, res) => {
   object
     .save()
     .then((_message) => {
-      res.status(200).json(`Your ${objectName} has been added!`);
+      res.status(200).json({message : `Your ${objectName} has been added!`});
     })
     .catch((_error) => {
       res.status(500).json(_error);
@@ -74,7 +74,7 @@ exports.delete = (model,objectName) => (req, res) => {
     },
   })
   .then((object) => {
-    res.status(200).json(`Your ${objectName} has been deleted!`);
+    res.status(200).json({message : `Your ${objectName} has been deleted!`});
   }
   )
   .catch((error) => {
