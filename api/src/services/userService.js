@@ -22,6 +22,6 @@ exports.loginUser = async (email, password) => {
     }
     // generate token
     const token = jwt.sign({ id: user.id }, config.secret, { expiresIn: 86400 });
-    
-    return token;
+
+    return {token, user};
 };
