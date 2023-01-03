@@ -11,7 +11,16 @@ module.exports = sequelize.define(
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: {
+    firstname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        // We require usernames to have length of at least 3, and
+        // only use letters, numbers and underscores.
+        is: /^\w{3,}$/,
+      },
+    },
+    surname: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -32,6 +41,14 @@ module.exports = sequelize.define(
         this.setDataValue('password', bcrypt.hashSync(password, 10));
       },
     },
+    color: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        // We require usernames to have length of at least 3, and
+        // only use letters, numbers and underscores.
+        is: /^#[0-9A-Fa-f]{6}$/i,
+      }
+    },
   },
-  {}
 );
