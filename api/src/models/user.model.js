@@ -1,9 +1,9 @@
-const bcrypt = require("bcryptjs");
-const sequelize = require("../config/database.config");
-const { DataTypes } = require("sequelize");
+const bcrypt = require('bcryptjs');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database.config');
 
 module.exports = sequelize.define(
-  "user",
+  'user',
   {
     id: {
       allowNull: false,
@@ -23,13 +23,13 @@ module.exports = sequelize.define(
     email: {
       type: DataTypes.STRING,
       set(email) {
-        this.setDataValue("email", email.toLowerCase());
+        this.setDataValue('email', email.toLowerCase());
       },
     },
     password: {
       type: DataTypes.STRING,
       set(password) {
-        this.setDataValue("password", bcrypt.hashSync(password, 10));
+        this.setDataValue('password', bcrypt.hashSync(password, 10));
       },
     },
   },

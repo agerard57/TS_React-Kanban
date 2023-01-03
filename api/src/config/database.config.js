@@ -1,12 +1,12 @@
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize("sqlite:../db/database.sqlite", {
+const sequelize = new Sequelize('sqlite:../db/database.sqlite', {
   define: {
     timestamps: false,
   },
 });
 
-const User = sequelize.define("user", {
+const User = sequelize.define('user', {
   name: Sequelize.STRING,
   email: Sequelize.STRING,
   password: Sequelize.STRING,
@@ -14,9 +14,9 @@ const User = sequelize.define("user", {
 
 sequelize.sync().then(() => {
   User.create({
-    name: "John",
-    email: "test@test.com",
-    password: "test",
+    name: 'John',
+    email: 'test@test.com',
+    password: 'test',
   });
 });
 
