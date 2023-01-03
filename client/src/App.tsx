@@ -1,19 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+// eslint-disable-next-line import/no-internal-modules
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Suspense } from 'react';
+import { Toaster } from 'react-hot-toast';
+import { I18nextProvider } from 'react-i18next';
+
 import './App.css';
+import { i18n } from './i18n';
+import { LoadingScreen } from './loadingScreen';
+import RouteManager from './routeManager';
 
 const App: React.FC = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
-    </header>
-  </div>
+  <I18nextProvider i18n={i18n}>
+    <Toaster
+      position="top-center"
+      reverseOrder={false}
+      gutter={8}
+      containerStyle={{ marginTop: '7vh' }}
+      toastOptions={{
+        duration: 5000
+      }}
+    />
+    <Suspense fallback={<LoadingScreen />}>
+      <RouteManager />
+    </Suspense>
+  </I18nextProvider>
 );
 
 export default App;
