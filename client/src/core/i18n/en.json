@@ -1,0 +1,84 @@
+{
+  "confirmationMessage": "The website's language has been successfully set to English!",
+
+  "deniedMessage": "The website's language was already set to English.",
+
+  "navbar": {
+    "home": "Home",
+    "search": "Search",
+    "inbox": "Inbox",
+    "dashboard": "Dashboard"
+  },
+
+  "days": {
+    "sunday": "Sun.",
+    "monday": "Mon.",
+    "tuesday": "Tue.",
+    "wednesday": "Wed.",
+    "thursday": "Thu.",
+    "friday": "Fri.",
+    "saturday": "Sat."
+  },
+
+  "reviews": {
+    "review_one": "{{nbReviews}} review",
+    "review_other": "{{nbReviews}} reviews",
+    "by": "by",
+    "stars": {
+      "1": "Very disappointing",
+      "2": "Not good",
+      "3": "Average",
+      "4": "Good",
+      "5": "Excellent"
+    }
+  },
+
+  "searchBox": {
+    "title": "Let’s find you a ride then!",
+    "tripType": {
+      "singleTrip": "Single trip",
+      "frequentTrip": "Frequent trip"
+    },
+    "tripPoints": {
+      "from": "Leaving from…",
+      "getTo": "Get to…"
+    },
+    "date": "When?",
+    "searchButton": "Find me a VroomMate!"
+  },
+
+  "footer": {
+    "language": "Language:",
+    "about": {
+      "title": "About us:",
+      "text": "We are a platform made as a project by two students at Metz Numeric School. We poured months of our lives as well as our <3 into this project and we hope you'll like it :) "
+    },
+    "contact": {
+      "title": "Contact us:",
+      "me": "GERARD Alexandre",
+      "email": "vroommates@agerard.dev"
+    },
+    "t&c": {
+      "title": "Terms & Conditions:",
+      "privacyPolicy": "Privacy policy",
+      "cookiesPolicy": "Cookies policy"
+    },
+    "button": "Go back up",
+    "bottom": {
+      "left": "©2022 VroomMates",
+      "right": "All rights reserved."
+    }
+  },
+
+  "desktopPage": {
+    "title": "Hello there!",
+    "subtitle": "We noticed you currently are on a desktop to visit this app!",
+    "text": "For the time being, VroomMates is only accessible via smartphone, so please feel free to use our services this way 📱"
+  },
+
+  "landscapeMode": {
+    "title": "Hello there!",
+    "subtitle": "We noticed you currently are on landscape mode to visit this app!",
+    "text": "For the time being, VroomMates is only accessible via portrait 📱"
+  }
+}
