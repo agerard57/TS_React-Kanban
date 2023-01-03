@@ -18,9 +18,9 @@ exports.register = async (req, res) => {
     user
       .save()
       .then(() => {
-          userServices.loginUser(req.body.email, req.body.password).then((token) => {
+          userServices.loginUser(req.body.email, req.body.password).then((response) => {
             res.status(200).json({
-                token,
+                token : response.token,
                 message: 'User registered!',
                 data : user
             });
@@ -37,6 +37,21 @@ exports.register = async (req, res) => {
           message: error,
         });
       });
+};
+
+exports.login = (req, res) => {
+    userServices.loginUser(req.body.email, req.body.password).then((response) => {
+        res.status(200).json({
+            token : response.token,
+            data : response.user,
+            message: 'User logged in!',
+        });
+    }).catch((error) => {
+        res.status(500).json({
+            message: "an error occured",
+            error
+        });
+    });
 };
 
 exports.getAll = genericCRUDController.getAll(UserModel);
