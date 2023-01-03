@@ -1,0 +1,33 @@
+{
+  "name": "ts_react-kanban",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "directories": {
+    "doc": "docs",
+    "api": "api",
+    "client": "client"
+  },
+  "private": true,
+  "workspaces": [
+    "api",
+    "client"
+  ],
+  "scripts": {
+    "start": "concurrently \"yarn workspace api start\" \"yarn workspace client start\"",
+    "tests": "concurrently \"yarn workspace client test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agerard57/TS_React-Kanban.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agerard57/TS_React-Kanban/issues"
+  },
+  "homepage": "https://github.com/agerard57/TS_React-Kanban#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
