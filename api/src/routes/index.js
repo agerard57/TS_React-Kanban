@@ -12,4 +12,5 @@ module.exports = function routes(app) {
   // ///////
   // Routes
   require('./user.routes')(app);
+  require('./list.routes')(app);
 };
