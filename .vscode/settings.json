@@ -1,4 +1,6 @@
 {
   "eslint.workingDirectories": ["./client", "./api"],
-  "cSpell.words": ["sonarqube", "sonarsource"]
+  "cSpell.words": ["sonarqube", "sonarsource"],
+  "jest.jestCommandLine": "yarn run test",
+  "jest.rootPath": "./client"
 }
