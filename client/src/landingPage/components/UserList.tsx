@@ -1,13 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
 
-import { KanbanList, List } from '../../core';
+import { List } from '../../core';
 import { ColorVignette } from '../../core/components/ColorVignette';
-import { PasswordlessUser } from '../../core/types';
-import { useLandingPage } from '../hooks';
-import { AddList } from './AddList';
 
 type Props = {
   lists: List[];
