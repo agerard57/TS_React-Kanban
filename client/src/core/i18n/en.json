@@ -4,6 +4,7 @@
     "loggedAs": "Logged in as {{username}}",
     "logout": "Logout"
   },
+
   "mobilePage": {
     "title": "Hello there!",
     "subtitle": "We noticed you currently are on a mobile to visit this app!",
