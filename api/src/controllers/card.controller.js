@@ -1,8 +1,4 @@
-const genericCrudController = require('./genericCRUDController');
 const CardModel = require('../models/card.model');
+const crudFactory = require('../factory/CrudFactory');
 
-exports.getAll = genericCrudController.getAll(CardModel);
-exports.getOne = genericCrudController.getOne(CardModel);
-exports.add = genericCrudController.add(CardModel, 'card');
-exports.patch = genericCrudController.patch(CardModel, 'card');
-exports.delete = genericCrudController.delete(CardModel, 'card');
+module.exports = crudFactory.createCrud(CardModel, 'card');
