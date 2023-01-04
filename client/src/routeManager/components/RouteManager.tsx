@@ -3,6 +3,7 @@ import MediaQuery from 'react-responsive';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import { Mobile, Layout } from '../../core';
+import { LandingPage } from '../../landingPage';
 
 /* import { LoadingScreen } from '../../loadingScreen'; */
 /* import { ProtectedRoute } from './ProtectedRoute'; */
@@ -21,7 +22,7 @@ const RouteManager: FC = () => {
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
 
-            <Route path="/home" element={<h1>Deez</h1>} />
+            <Route path="/home" element={<LandingPage />} />
             {/*               <Route
                 path="/user/"
                 element={
