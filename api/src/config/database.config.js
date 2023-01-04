@@ -6,4 +6,6 @@ const sequelize = new Sequelize('sqlite:../db/database.sqlite', {
   },
 });
 
+sequelize.sync();
+
 module.exports = sequelize;
