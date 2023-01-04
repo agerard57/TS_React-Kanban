@@ -1,83 +1,12 @@
 {
-  "confirmationMessage": "La langue du site a bien été changée en Francais !",
-
-  "deniedMessage": "La langue du site est déjà en Francais.",
-
   "navbar": {
-    "home": "Accueil",
-    "search": "Recherche",
-    "inbox": "Réception",
-    "dashboard": "Menu"
+    "title": "Kanban",
+    "loggedAs": "Connecté en tant que {{username}}",
+    "logout": "Déconnexion"
   },
-
-  "days": {
-    "monday": "Lun.",
-    "tuesday": "Mar.",
-    "wednesday": "Mer.",
-    "thursday": "Jeu.",
-    "friday": "Ven.",
-    "saturday": "Sam.",
-    "sunday": "Dim."
-  },
-
-  "reviews": {
-    "review": "{{nbReviews}} avis",
-    "by": "par",
-    "stars": {
-      "1": "Très décevant",
-      "2": "Pas très bon",
-      "3": "Moyen",
-      "4": "Bon",
-      "5": "Excellent"
-    }
-  },
-
-  "searchBox": {
-    "title": "Il est grand temps de se trouver un VroomMate !",
-    "tripType": {
-      "singleTrip": "Voyage unique",
-      "frequentTrip": "Voyage fréquent"
-    },
-    "tripPoints": {
-      "from": "Partir de…",
-      "getTo": "Arriver à…"
-    },
-    "date": "Quand?",
-    "searchButton": "Lancer la recherche !"
-  },
-
-  "footer": {
-    "language": "Langue:",
-    "about": {
-      "title": "À propos",
-      "text": "VroomMates est une plateforme réalisée en tant que projet de fin d'année de licence, à Metz Numeric School. Nous avons travaillé des mois durant et y avons mis tout notre <3. On espère que cela vous plaira :)"
-    },
-    "contact": {
-      "title": "Nous contacter:",
-      "me": "GERARD Alexandre",
-      "email": "vroommates@agerard.dev"
-    },
-    "t&c": {
-      "title": "Termes & Conditions:",
-      "privacyPolicy": "Politique de confidentialité",
-      "cookiesPolicy": "Politique sur les cookies"
-    },
-    "button": "Remonter",
-    "bottom": {
-      "left": "©2022 VroomMates",
-      "right": "Tous droits réservés."
-    }
-  },
-
-  "desktopPage": {
+  "mobilePage": {
     "title": "Hello toi !",
-    "subtitle": "On a remarqué que tu utilisais un ordinateur pour visiter cette application !",
-    "text": "Pour le moment, VroomMates est uniquement accessible avec un smartphone, donc n'hésite pas à recourir à nos services de cette façon 📱"
-  },
-
-  "landscapeMode": {
-    "title": "Hello toi !",
-    "subtitle": "On a remarqué que tu utilisais notre site en mode paysage !",
-    "text": "Pour le moment, VroomMates est uniquement utilisable en portrait 📱"
+    "subtitle": "On a remarqué que tu utilisais un téléphone pour visiter cette application !",
+    "text": "Pour le moment, le Kanban est uniquement accessible avec un ordinateur, donc n'hésite pas à recourir à nos services de cette façon 💻"
   }
 }

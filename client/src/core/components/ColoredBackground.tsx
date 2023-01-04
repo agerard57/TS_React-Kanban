@@ -11,6 +11,12 @@ export const ColoredBackground: FC<Props> = ({ children, outsideStyling }) => (
     css={css`
       display: flex;
       align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
       background-image: linear-gradient(
         140deg,
         hsl(219deg 100% 59%) 0%,
