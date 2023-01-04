@@ -51,7 +51,7 @@ export const Mobile: FC = () => {
             font-size: 3rem;
           `}
         >
-          {t('desktopPage.title')}
+          {t('mobilePage.title')}
         </h1>
         <h2
           css={css`
@@ -59,7 +59,7 @@ export const Mobile: FC = () => {
             font-size: 2rem;
           `}
         >
-          {t('desktopPage.subtitle')}
+          {t('mobilePage.subtitle')}
         </h2>
         <hr />
         <span
@@ -69,7 +69,7 @@ export const Mobile: FC = () => {
             text-align: center;
           `}
         >
-          {t('desktopPage.text')}
+          {t('mobilePage.text')}
         </span>
       </div>
       <div

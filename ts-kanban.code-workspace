@@ -9,6 +9,10 @@
         "path": "./docs"
       },
       {
+        "name": "Scripts",
+        "path": "./scripts"
+      },
+      {
         "name": "Database",
         "path": "./database"
       },
@@ -29,6 +33,7 @@
       "jest.disabledWorkspaceFolders": [
         "Root",
         "Docs",
+        "Scripts",
         "Database",
         "Server"
       ],
@@ -71,9 +76,9 @@
       "discord.enabled": true,
       "conventionalCommits.scopes": [
         "root",
-        "tripsPage",
-        "policiesPages",
-        "profilePage"
+        "docs",
+        "api",
+        "client"
       ]
     },
     "extensions": {
