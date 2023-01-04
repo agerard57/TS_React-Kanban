@@ -28,6 +28,7 @@ export const Navbar: FC = () => {
           > * {
             margin: 0 0.2rem;
             cursor: pointer;
+            border-radius: 5px;
           }
         `}
       >
