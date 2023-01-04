@@ -4,6 +4,7 @@
     "loggedAs": "Connecté en tant que {{username}}",
     "logout": "Déconnexion"
   },
+
   "mobilePage": {
     "title": "Hello toi !",
     "subtitle": "On a remarqué que tu utilisais un téléphone pour visiter cette application !",
