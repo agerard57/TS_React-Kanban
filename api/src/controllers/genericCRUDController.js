@@ -11,7 +11,7 @@ exports.getAll = (model) => (req, res) => {
     };
 
 exports.getOne = (model) => (req, res) => {
-    const id = req.params.id;
+    const {id} = req.params;
  
     model.findByPk(id)
      .then((object) => {
@@ -30,12 +30,12 @@ exports.getOne = (model) => (req, res) => {
      });
  };
 
- exports.add = (model,objectName) => (req, res) => {
-  const object = new model(req.body);
+ exports.add = (Model,objectName) => (req, res) => {
+  const object = new Model(req.body);
 
   object
     .save()
-    .then((_message) => {
+    .then(() => {
       res.status(200).json({message:`Your ${objectName} has been added!`});
     })
     .catch((_error) => {
@@ -50,7 +50,7 @@ exports.patch = (model,objectName) => (req, res) => {
     },
   })
   .then((object) => {
-    if (object == 1) {
+    if (object === 1) {
       res.status(200).json({
         message: `Your ${objectName} has been updated!`,
       });
@@ -73,7 +73,7 @@ exports.delete = (model,objectName) => (req, res) => {
       id: req.params.id,
     },
   })
-  .then((object) => {
+  .then(() => {
     res.status(200).json({message: `Your ${objectName} has been deleted!`});
   }
   )
