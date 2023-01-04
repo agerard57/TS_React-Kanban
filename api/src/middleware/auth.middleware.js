@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth.config');
 
-// get the bearer token from the header
 const extractBearerToken = headerValue => {
     if (typeof headerValue !== 'string') {
         return false;
@@ -11,7 +10,6 @@ const extractBearerToken = headerValue => {
     return matches && matches[2];
 }
 
-// verify is the token is on header and is valid
 exports.checkTokenMiddleware = (req, res, next) => {
     
     const token = req.headers.authorization && extractBearerToken(req.headers.authorization);
