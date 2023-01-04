@@ -1,6 +1,6 @@
-const UserModel = require('../models/user.model');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const UserModel = require('../models/user.model');
 const config = require('../config/auth.config');
 
 exports.userExists = async (email) => {
