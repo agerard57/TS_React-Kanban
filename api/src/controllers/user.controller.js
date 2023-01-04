@@ -62,5 +62,3 @@ exports.login = (req, res) => {
       });
     });
 };
-
-
