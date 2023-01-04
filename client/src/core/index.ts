@@ -1,10 +1,10 @@
 export * as i18n from './i18n';
 
-export { Layout, ColoredBackground, Mobile } from './components';
+export { Layout, ColoredBackground, Mobile, KanbanList, TextInput } from './components';
 
 export { cookiesManager, normalizeDate, normalizeTime, logout } from './helpers';
 
-export type { AuthToken, LoggedUserDataProps } from './types';
+export type { AuthToken, LoggedUserDataProps, Card, List, User } from './types';
 
 export { usePageTitle, useCustomToast } from './hooks';
 
