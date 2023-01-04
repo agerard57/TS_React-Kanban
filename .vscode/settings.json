@@ -1,3 +1,4 @@
 {
-  "eslint.workingDirectories": ["./client", "./api"]
+  "eslint.workingDirectories": ["./client", "./api"],
+  "cSpell.words": ["sonarqube", "sonarsource"]
 }
