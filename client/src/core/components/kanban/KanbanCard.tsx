@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import { FC } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
+import { useModal } from '../../../modal';
+import { useCustomToast } from '../../hooks';
 import { Card } from '../../types';
 import { ColorVignette } from '../ColorVignette';
 
@@ -11,6 +13,10 @@ type CardProps = {
 };
 
 export const KanbanCard: FC<CardProps> = ({ card }) => {
+  const { toast } = useCustomToast();
+  const { openModal } = useModal();
+  const handleClick = () => toast.custom(<h1>Deez</h1>);
+  co;
   return (
     <Row
       css={css`
@@ -25,6 +31,7 @@ export const KanbanCard: FC<CardProps> = ({ card }) => {
         min-width: 20vw;
         max-width: 23vw;
       `}
+      onClick={openModal()}
     >
       <Row>
         <h3
