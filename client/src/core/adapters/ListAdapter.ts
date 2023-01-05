@@ -1,20 +1,20 @@
+import { CardDto } from '../dto/CardDto';
 import { ListDto } from '../dto/ListDto';
-import { List } from '../types';
+import { Card, List } from '../types';
+import { adapteCardDtoToCard } from './CardAdapter';
+import { adaptUserDtoToUser } from './UserAdapter';
 
 export const adaptListDtoToList = (listDto: ListDto): List => {
+  const cards: Card[] = listDto.card.map((card: CardDto) => {
+    return adapteCardDtoToCard(card);
+  });
+
   const list: List = {
     id: listDto.id,
     title: listDto.title,
-    author: {
-      id: listDto.user_id,
-      name: {
-        firstName: 'test',
-        lastName: 'test'
-      },
-      email: 'test@gmail.com',
-      color: '#ff0000'
-    },
-    cards: []
+    author: adaptUserDtoToUser(listDto.user),
+    cards
   };
+
   return list;
 };
