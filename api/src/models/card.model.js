@@ -1,7 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database.config');
+const userModel = require('./user.model');
 
-module.exports = sequelize.define(
+const cardModel = sequelize.define(
   'card',
   {
     id: {
@@ -18,13 +19,25 @@ module.exports = sequelize.define(
         is: /^[a-zA-Z0-9_ ]{1,}$/,
       },
     },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     author_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      }
     },
     edited_by_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      }
     },
     list_id: {
       type: DataTypes.INTEGER,
@@ -33,3 +46,15 @@ module.exports = sequelize.define(
   },
   {}
 );
+
+cardModel.belongsTo(userModel, {
+  foreignKey: 'author_id',
+  as: 'author',
+});
+
+cardModel.belongsTo(userModel, {
+  foreignKey: 'edited_by_id',
+  as: 'edited_by',
+});
+
+module.exports = cardModel;
