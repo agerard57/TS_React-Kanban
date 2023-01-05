@@ -3,12 +3,12 @@ import { css } from '@emotion/react';
 import { FC } from 'react';
 
 type Props = {
-  firstName: string;
+  first_name: string;
   color: string;
   size: number;
 };
 
-export const ColorVignette: FC<Props> = ({ firstName, color, size }) => (
+export const ColorVignette: FC<Props> = ({ first_name, color, size }) => (
   <div
     css={css`
       width: ${size}px;
@@ -29,7 +29,7 @@ export const ColorVignette: FC<Props> = ({ firstName, color, size }) => (
         color: #ffffff;
       `}
     >
-      {firstName[0]}
+      {first_name[0]}
     </span>
   </div>
 );

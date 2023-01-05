@@ -17,7 +17,7 @@ export const LandingPage: FC = () => {
   const author1: PasswordlessUser = {
     id: 1,
     name: {
-      firstName: 'Alexandre',
+      first_name: 'Alexandre',
       lastName: 'GERARD'
     },
     email: 'mns@agerard.dev',
@@ -27,7 +27,7 @@ export const LandingPage: FC = () => {
   const author2: PasswordlessUser = {
     id: 2,
     name: {
-      firstName: 'Nicolas',
+      first_name: 'Nicolas',
       lastName: 'POIRE'
     },
     email: 'mns@npoire.dev',

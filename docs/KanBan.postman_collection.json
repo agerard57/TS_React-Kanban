@@ -278,7 +278,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstname\" : \"vincent\",\r\n    \"surname\" : \"remy\",\r\n    \"email\" : \"rsssssssssssey@gml.com\",\r\n    \"password\" : \"Azerty123\",\r\n    \"color\" : \"#ff0000\"\r\n}",
+							"raw": "{\r\n    \"first_name\" : \"vincent\",\r\n    \"last_name\" : \"remy\",\r\n    \"email\" : \"rsssssssssssey@gml.com\",\r\n    \"password\" : \"Azerty123\",\r\n    \"color\" : \"#ff0000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -381,7 +381,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"surname\" : \"REMY\"\r\n}",
+							"raw": "{\r\n    \"last_name\" : \"REMY\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

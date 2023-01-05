@@ -37,7 +37,7 @@ export const UserList: FC<Props> = ({ lists }) => (
           color={author.color}
           key={author.id}
           size={40}
-          firstName={`${author.name.firstName} ${author.name.lastName}`}
+          first_name={`${author.name.first_name} ${author.name.lastName}`}
         />
       ))}
   </div>
