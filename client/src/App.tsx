@@ -1,12 +1,10 @@
 // eslint-disable-next-line import/no-internal-modules
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { I18nextProvider } from 'react-i18next';
 
 import './App.css';
 import { i18n } from './i18n';
-import { LoadingScreen } from './loadingScreen';
 import RouteManager from './routeManager';
 
 const App: React.FC = () => (
@@ -20,9 +18,7 @@ const App: React.FC = () => (
         duration: 5000
       }}
     />
-    <Suspense fallback={<LoadingScreen />}>
-      <RouteManager />
-    </Suspense>
+    <RouteManager />
   </I18nextProvider>
 );
 

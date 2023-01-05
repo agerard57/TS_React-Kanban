@@ -5,10 +5,10 @@ import { i18n } from '../../i18n';
 import { isLanguageCode } from '../helpers';
 import { LanguageCode } from '../types';
 
-export function useLanguage(): {
+export const useLanguage = (): {
   language: LanguageCode;
   change: (lang: LanguageCode) => Promise<TFunction>;
-} {
+} => {
   if (!isLanguageCode(i18n.language)) throw new Error(`Unknown language code: ${i18n.language}`);
 
   const [language, setLang] = useState<LanguageCode>(i18n.language);
@@ -20,4 +20,4 @@ export function useLanguage(): {
   });
 
   return { language, change };
-}
+};
