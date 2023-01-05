@@ -8,17 +8,61 @@ const headers = {
   'Content-Type': 'application/json',
 };
 
-const libs = {
-  assert,
-  fetch,
-  faker,
-};
+const mainTests = async () => {
 
-const options = {
-  baseUrl,
-  headers,
-};
+  const mainUser = {
+    first_name:"Toby",
+    last_name: "toto",
+    email: "tutu@gmail.com",
+    password: "1234",
+    color: "#873260" ,
+  };
+  
+  const createUser = async () => {
+    const response =  fetch(`${baseUrl}/user/register`, {
+      headers,
+      method: 'POST',
+          body: JSON.stringify(mainUser),
+        }).then((res) => ({
+          body: res.json(),
+          status: res.status,
+        })
+    );
+  };
 
-require('./Users')(libs, options);
-require('./List')(libs, options);
-require('./Cards')(libs, options);
+  const getToken = async () => {
+    createUser();
+  
+    const raiponce = await fetch(`${baseUrl}/user/login`, {
+      headers,
+      method: 'POST',
+      body: JSON.stringify({
+        email: mainUser.email,
+        password: mainUser.password,
+      }),
+    });
+    const vaiana = await raiponce.json();
+  
+    tiana = vaiana.token;
+    return tiana;
+  }
+  
+  const libs = {
+    assert,
+    fetch,
+    faker,
+  };
+  
+  const options = {
+    baseUrl,
+    headers,
+    mainUser,
+    token: await getToken().then((data) => data)
+  };
+
+  require('./Users')(libs, options);
+  // require('./List')(libs, options);
+  // require('./Cards')(libs, options);
+}
+
+mainTests();
