@@ -1,6 +1,5 @@
-import { CardDto } from '../dto/CardDto';
-import { ListDto } from '../dto/ListDto';
-import { Card, List } from '../types';
+import { CardDto, ListDto } from '../dto';
+import { Card, List } from '../interfaces';
 import { adapteCardDtoToCard } from './CardAdapter';
 import { adaptUserDtoToUser } from './UserAdapter';
 

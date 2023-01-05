@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { adaptListDtoToList } from '../adapters/ListAdapter';
-import { ListDto } from '../dto/ListDto';
-import { List } from '../types';
+import { adaptListDtoToList } from '../adapters';
+import { ListDto } from '../dto';
+import { List } from '../interfaces';
 
 export const getAll: () => Promise<List[]> = async () => {
   const url = 'http://localhost:3001/lists/details';
