@@ -2,9 +2,9 @@ const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
 
-module.exports = function routes(app) {
+const routes = (app) => {
   // /////////////////////////
-  // Middlewares instantiated
+  // Middleware instantiated
   app.use(cors());
   app.use(morgan('tiny'));
   app.use(express.json({ extended: true }));
@@ -15,3 +15,5 @@ module.exports = function routes(app) {
   require('./list.routes')(app);
   require('./card.routes')(app);
 };
+
+module.exports = routes;
