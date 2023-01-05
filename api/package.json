@@ -8,7 +8,7 @@
     "start": "nodemon index.js",
     "clean": "rm -rf node_modules/ && rm -rf yarn.lock && rm -rf package-lock.json",
     "lint": "eslint src --fix --cache",
-    "tests": "mocha test/ --reporter spec"
+    "tests": "node test/setupTest && mocha test/index --reporter spec"
   },
   "author": "agerard57",
   "license": "MIT",

@@ -12,7 +12,7 @@ module.exports = (libs, options) => {
 
   // Creation of user
   const createUser = () => {
-    const response = fetch(`${baseUrl}/user/register`, {
+    fetch(`${baseUrl}/user/register`, {
       headers,
       method: 'POST',
       body: JSON.stringify({
@@ -23,36 +23,29 @@ module.exports = (libs, options) => {
         color: user.color,
       }),
     }).then((res) => ({
-      body: res.json(),
-      status: res.status,
-    }));
+        body: res.json(),
+        status: res.status,
+      })
+    );
   };
 
   createUser();
+  
 
   describe('Test for connection of user', () => {
-    it('should return status 200', async () => {
+    it('should return status 200', () => {
       // Create user for connection
-      const response = await fetch(`${baseUrl}/user/login`, {
+      fetch(`${baseUrl}/user/login`, {
         headers,
         method: 'POST',
         body: JSON.stringify({
           email: user.email,
           password: user.password,
         }),
-      }).then((res) =>
-        res
-          .json()
-          .then((data) => ({
-            data,
-            status: res.status,
-          }))
-          .catch((err) => {
-            console.log(err);
-          })
+      }).then((response) => {
+        assert.equal(response.status, 200);
+      }
       );
-
-      assert.equal(response.status, 200);
     });
   });
 };
