@@ -1,5 +1,6 @@
-export interface PasswordlessUser {
-  id: number;
+import { IBO } from './IBO';
+
+export interface PasswordlessUser extends IBO {
   name: {
     first_name: string;
     lastName: string;
