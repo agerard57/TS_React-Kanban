@@ -11,7 +11,7 @@ const resolve = require('resolve');
  *
  * @param {Object} options
  */
-function getAdditionalModulePaths(options = {}) {
+const getAdditionalModulePaths = (options = {}) => {
   const baseUrl = options.baseUrl;
 
   if (!baseUrl) {
@@ -47,14 +47,14 @@ function getAdditionalModulePaths(options = {}) {
         ' Create React App does not support other values at this time.'
     )
   );
-}
+};
 
 /**
  * Get webpack aliases based on the baseUrl of a compilerOptions object.
  *
  * @param {*} options
  */
-function getWebpackAliases(options = {}) {
+const getWebpackAliases = (options = {}) => {
   const baseUrl = options.baseUrl;
 
   if (!baseUrl) {
@@ -68,14 +68,14 @@ function getWebpackAliases(options = {}) {
       src: paths.appSrc
     };
   }
-}
+};
 
 /**
  * Get jest aliases based on the baseUrl of a compilerOptions object.
  *
  * @param {*} options
  */
-function getJestAliases(options = {}) {
+const getJestAliases = (options = {}) => {
   const baseUrl = options.baseUrl;
 
   if (!baseUrl) {
@@ -89,9 +89,9 @@ function getJestAliases(options = {}) {
       '^src/(.*)$': '<rootDir>/src/$1'
     };
   }
-}
+};
 
-function getModules() {
+const getModules = () => {
   // Check if TypeScript is setup
   const hasTsConfig = fs.existsSync(paths.appTsConfig);
   const hasJsConfig = fs.existsSync(paths.appJsConfig);
@@ -129,6 +129,6 @@ function getModules() {
     jestAliases: getJestAliases(options),
     hasTsConfig
   };
-}
+};
 
 module.exports = getModules();

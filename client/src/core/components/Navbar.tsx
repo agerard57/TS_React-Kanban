@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { Button, Navbar as BootstrapNavbar } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
+import { LanguageCode } from '../../language';
 import { ReactComponent as EnglishFlag } from '../assets/EnglishFlag.svg';
 import { ReactComponent as FrenchFlag } from '../assets/FrenchFlag.svg';
 import { useLanguage } from '../language';
@@ -11,6 +12,10 @@ import { useLanguage } from '../language';
 export const Navbar: FC = () => {
   const { t } = useTranslation('Core');
   const { language, change } = useLanguage();
+
+  const handleLanguageChange = (newLanguage: LanguageCode) => () => {
+    change(newLanguage);
+  };
 
   return (
     <BootstrapNavbar
@@ -33,13 +38,13 @@ export const Navbar: FC = () => {
         `}
       >
         <EnglishFlag
-          onClick={() => change('en')}
+          onClick={handleLanguageChange('en')}
           css={css`
             opacity: ${language === 'en' ? 1 : 0.3};
           `}
         />
         <FrenchFlag
-          onClick={() => change('fr')}
+          onClick={handleLanguageChange('fr')}
           css={css`
             opacity: ${language === 'fr' ? 1 : 0.3};
           `}

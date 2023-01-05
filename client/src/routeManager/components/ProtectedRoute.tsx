@@ -7,5 +7,8 @@ type Props = {
   children: ReactNode;
 };
 
-export const ProtectedRoute: FC<Props> = ({ isAllowed, redirectPath = '/home', children }) =>
-  isAllowed ? children ? <>{children}</> : <Outlet /> : <Navigate to={redirectPath} replace />;
+export const ProtectedRoute: FC<Props> = ({ isAllowed, redirectPath = '/home', children }) => {
+  const hasChildren = children ? <>{children}</> : <Outlet />;
+
+  return isAllowed ? hasChildren : <Navigate to={redirectPath} replace />;
+};
