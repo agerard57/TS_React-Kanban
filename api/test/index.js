@@ -20,3 +20,5 @@ const options = {
 };
 
 require('./Users')(libs, options);
+require('./List')(libs, options);
+require('./Cards')(libs, options);
