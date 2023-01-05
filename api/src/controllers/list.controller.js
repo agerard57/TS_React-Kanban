@@ -11,6 +11,16 @@ module.exports.getAllWithDetails = (req, res) => {
             {
                 model: CardModel,
                 as: 'card',
+                include: [
+                    {
+                        model: UserModel,
+                        as: 'author',
+                    },
+                    {
+                        model: UserModel,
+                        as: 'edited_by',
+                    },
+                ],
             },
             {
                 model: UserModel,
