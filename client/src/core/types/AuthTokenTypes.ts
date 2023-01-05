@@ -1,25 +1,21 @@
-// TODO Change this
-
-type AuthTokenData = {
-  id: string;
+interface AuthTokenData {
+  id: number;
   name: {
     first_name: string;
     last_name: string;
   };
-  confirmedEmail: boolean;
-  photoUrl: string;
-  avgRating: number;
-  role: 'user';
-};
+  email: string;
+  color: string;
+}
 
-type AuthTokenMeta = {
+interface AuthTokenMeta {
   rememberMe: boolean;
   iat: number;
   exp: number;
   aud: string;
   iss: string;
   sub: string;
-};
+}
 
 export interface AuthToken {
   data: AuthTokenData | null;
