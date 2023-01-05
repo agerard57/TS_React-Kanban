@@ -1,5 +1,3 @@
-const bcrypt = require('bcryptjs');
-
 
 module.exports = (libs, options) => {
   const { assert, fetch, faker } = libs;
