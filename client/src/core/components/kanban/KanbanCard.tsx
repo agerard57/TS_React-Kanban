@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { FC } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import { Card } from '../../types';
+import { Card } from '../../interfaces';
 import { ColorVignette } from '../ColorVignette';
 
 type CardProps = {
