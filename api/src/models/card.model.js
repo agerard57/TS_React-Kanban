@@ -26,6 +26,10 @@ module.exports = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    list_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {}
 );
