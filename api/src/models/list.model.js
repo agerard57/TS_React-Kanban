@@ -1,7 +1,10 @@
 const { DataTypes } = require('sequelize');
+const cardModel = require('./card.model');
+const userModel = require('./user.model');
+
 const sequelize = require('../config/database.config');
 
-module.exports = sequelize.define(
+const ListModel = sequelize.define(
   'list',
   {
     id: {
@@ -25,3 +28,17 @@ module.exports = sequelize.define(
   },
   {}
 );
+
+// make relation with card model
+ListModel.hasMany(cardModel, {
+  foreignKey: 'list_id',
+  as: 'card',
+});
+
+// make relation with user model
+ListModel.belongsTo(userModel, {
+  foreignKey: 'user_id',
+  as: 'user',
+});
+
+module.exports = ListModel;
