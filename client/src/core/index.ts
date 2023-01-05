@@ -1,6 +1,14 @@
 export * as i18n from './i18n';
 
-export { Layout, ColoredBackground, Mobile, KanbanList, TextInput, Navbar } from './components';
+export {
+  Layout,
+  ColoredBackground,
+  Mobile,
+  KanbanList,
+  TextInput,
+  Navbar,
+  Inputs
+} from './components';
 
 export { cookiesManager, normalizeDate, normalizeTime, logout } from './helpers';
 
