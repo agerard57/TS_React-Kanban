@@ -28,8 +28,8 @@ const mainTests = () => {
     token
   };
   
-  require('./Users')(libs, options);
-  // require('./Lists')(libs, options);
+  // require('./Users')(libs, options);
+  require('./Lists')(libs, options);
   // require('./Cards')(libs, options);
 };
 
