@@ -1,3 +1,6 @@
+const bcrypt = require('bcryptjs');
+
+
 module.exports = (libs, options) => {
   const { assert, fetch, faker } = libs;
   const { headers, baseUrl } = options;
@@ -10,7 +13,7 @@ module.exports = (libs, options) => {
         body: JSON.stringify({
           first_name: faker.name.firstName(),
           last_name: faker.name.lastName(),
-          email: 'Tset@tset.tuvalu',
+          email: faker.internet.email().toLowerCase(),
           password: faker.internet.password(),
           color: faker.internet.color(),
         }),
