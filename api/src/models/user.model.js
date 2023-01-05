@@ -11,7 +11,7 @@ module.exports = sequelize.define(
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    firstname: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -20,7 +20,7 @@ module.exports = sequelize.define(
         is: /^\w{3,}$/,
       },
     },
-    surname: {
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

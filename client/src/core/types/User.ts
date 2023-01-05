@@ -1,7 +1,7 @@
 export interface PasswordlessUser {
   id: number;
   name: {
-    firstName: string;
+    first_name: string;
     lastName: string;
   };
   email: string;
