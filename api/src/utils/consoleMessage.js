@@ -7,7 +7,7 @@
  * @return {void}         Simply displays the message.
  */
 
-module.exports = function consoleMessage(port) {
+const consoleMessage = (port) => {
   const resetStyles = '\x1b[0m';
   const bold = '\x1b[1m';
   const grey = '\x1b[2m';
@@ -19,3 +19,5 @@ module.exports = function consoleMessage(port) {
     `App now ${bold}running${resetStyles} on port ${blue}${port}${resetStyles}\n${grey}URL : ${url}${resetStyles}`
   );
 };
+
+module.exports = consoleMessage;

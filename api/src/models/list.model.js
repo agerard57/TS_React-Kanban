@@ -17,8 +17,8 @@ const ListModel = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        // Title must be have minimum length of 1 any caracter allowed
-        is: /^.{1,}$/,
+        // Title must be have minimum length of 1 any character allowed
+        is: /^[a-zA-Z0-9_ ]{1,}$/,
       },
     },
     user_id: {

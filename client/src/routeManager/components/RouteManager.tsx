@@ -5,12 +5,10 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import { Mobile, Layout } from '../../core';
 import { LandingPage } from '../../landingPage';
 
-/* import { LoadingScreen } from '../../loadingScreen'; */
 /* import { ProtectedRoute } from './ProtectedRoute'; */
 
 const RouteManager: FC = () => {
   /*   const { isUserLoggedIn, loggedUserData, loading } = useRouteManager(); */
-  /* if (loading) return <LoadingScreen />; */
 
   return (
     <Router>
