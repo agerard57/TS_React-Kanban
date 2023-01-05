@@ -1,5 +1,5 @@
 
 module.exports = (libs, options) => {
 
-  require('./createUser.test')(libs, options);
+  require('./connectUser.test')(libs, options);
 };
