@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import { CardDetailsModalBuilder } from '../../../cardDetailsModal';
 import { useModal } from '../../../modal';
-import { Card } from '../../types';
+import { Card } from '../../interfaces';
 import { ColorVignette } from '../ColorVignette';
 
 type CardProps = {

@@ -12,7 +12,9 @@ export {
 
 export { cookiesManager, normalizeDate, normalizeTime, logout } from './helpers';
 
-export type { AuthToken, LoggedUserDataProps, Card, List, User } from './types';
+export type { AuthToken, LoggedUserDataProps } from './types';
+
+export type { Card, List, User } from './interfaces';
 
 export { usePageTitle, useCustomToast } from './hooks';
 

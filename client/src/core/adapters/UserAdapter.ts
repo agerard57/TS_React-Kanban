@@ -1,5 +1,5 @@
-import { UserDto } from '../dto/UserDto';
-import { User } from '../types';
+import { UserDto } from '../dto';
+import { User } from '../interfaces';
 
 export const adaptUserDtoToUser = (userDto: UserDto): User => {
   const user: User = {
