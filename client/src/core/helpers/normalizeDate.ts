@@ -25,7 +25,7 @@ export const normalizeDate: NormalizeDate = (date, lng, dateFormat) => {
           .replace(
             /\w\S*/g,
             (readableShortDate) =>
-              readableShortDate.charAt(0).toUpperCase() + readableShortDate.substr(1).toLowerCase()
+              readableShortDate.charAt(0).toUpperCase() + readableShortDate.slice(1)
           )
           // Replace all , with a space
           .replace(',', '.')
@@ -43,7 +43,7 @@ export const normalizeDate: NormalizeDate = (date, lng, dateFormat) => {
           .replace(
             /\w\S*/g,
             (readableLongDate) =>
-              readableLongDate.charAt(0).toUpperCase() + readableLongDate.substr(1).toLowerCase()
+              readableLongDate.charAt(0).toUpperCase() + readableLongDate.slice(1)
           )
           // Replace all , with a space
           .replace(/,/g, ' ')

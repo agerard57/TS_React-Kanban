@@ -1,6 +1,4 @@
-const assert = require('assert');
-
-// Test create List with title Tset if execute equal 200
+// Test create List with title Test if execute equal 200
 module.exports = () => {
   const routeList = '/list';
 
@@ -11,7 +9,7 @@ module.exports = () => {
 
     app.post(routeList, (req, res) => {
       res.status(200).json({
-        title: 'Tset',
+        title: 'Test',
         user_id: 5,
       });
     });
@@ -22,7 +20,7 @@ module.exports = () => {
       .expect(200)
       .end((err, res) => {
         console.log(
-          `\n\nTest create List with title Tset, should return 200 http code ${JSON.stringify(
+          `\n\nTest create List with title Test, should return 200 http code ${JSON.stringify(
             res.body
           )}`
         );
@@ -34,7 +32,7 @@ module.exports = () => {
       });
   };
 
-  function createListWithNoTitleReturn500() {
+  const createListWithNoTitleReturn500 = () => {
     const express = require('express');
     const app = express();
     const request = require('supertest');
@@ -62,9 +60,9 @@ module.exports = () => {
           console.log(`test pass, result status : ${res.status}`);
         }
       });
-  }
+  };
 
-  function createListWithNoUserIDReturn500() {
+  const createListWithNoUserIDReturn500 = () => {
     const express = require('express');
     const app = express();
     const request = require('supertest');
@@ -92,7 +90,7 @@ module.exports = () => {
           console.log(`test pass, result status : ${res.status}`);
         }
       });
-  }
+  };
 
   createListIsGood();
   createListWithNoTitleReturn500();
