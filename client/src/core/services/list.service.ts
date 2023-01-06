@@ -10,6 +10,8 @@ export const getAllLists: () => Promise<List[]> = async () => {
   const data = response.data as ListDto[];
   const lists = [] as List[];
 
+  console.log('data', process.env.REACT_APP_API_URL, data);
+
   data.forEach((listDto) => {
     const list = adaptListDtoToList(listDto);
     lists.push(list);
