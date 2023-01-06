@@ -27,7 +27,7 @@ const cardModel = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id',
       },
     },
@@ -35,7 +35,7 @@ const cardModel = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id',
       },
     },

@@ -20,7 +20,7 @@ exports.loginUser = async (email, password) => {
     console.log('Invalid password!');
     throw new Error('Invalid password!');
   }
-  // generate token
+
   const token = jwt.sign({ id: user.id }, config.secret, { expiresIn: 86400 });
 
   return { token, user };

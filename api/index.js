@@ -4,6 +4,8 @@ const app = express();
 
 const getRoutes = require('./src/routes');
 
+require('dotenv').config();
+
 getRoutes(app);
 
 const portConfig = require('./src/config/port.config');
