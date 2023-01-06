@@ -11,31 +11,34 @@ export const modalStyles = (isOpen: boolean) => {
   }, 400);
 
   const animation = isOpen
-    ? css`animation: slide-up 0.3s ease-in forwards;
-      @keyframes slide-up {
-        0% {
-          transform: translateY(100%);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-    }`
-    : css`
-        ${display ? '' : 'display: none;'}
-        animation: slide-down 0.3s ease-out forwards;
-        @keyframes slide-down {
+    ? // Opcaity
+      css`
+        animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        @keyframes fade-in {
           0% {
-            transform: translateY(0);
+            opacity: 0;
           }
           100% {
-            transform: translateY(100%);
+            opacity: 1;
+          }
+        }
+      `
+    : css`
+        ${display ? '' : 'display: none;'}
+        animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        @keyframes fade-out {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
           }
         }
       `;
 
   return css`
-    background: #ffffff;
+    background: transparent;
+    backdrop-filter: blur(6px);
     position: fixed;
     z-index: 1031;
     top: 0;
@@ -43,7 +46,7 @@ export const modalStyles = (isOpen: boolean) => {
     right: 0;
     bottom: 0;
     display: 'block';
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.5);
     ${animation}
   `;
 };

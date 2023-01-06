@@ -7,11 +7,9 @@ export const useModalManager = (): UseModalManager => {
   const emptySlideSpec: SlideSpec = { content: <EmptyModal /> };
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [modalName, setModalName] = useState<string>('');
   const [slideSpec, setSlideSpec] = useState<SlideSpec>(emptySlideSpec);
 
-  const openModal = (data: SlideSpec, name: string) => {
-    setModalName(name);
+  const openModal = (data: SlideSpec) => {
     setSlideSpec(data);
     setIsOpen(true);
   };
@@ -22,7 +20,6 @@ export const useModalManager = (): UseModalManager => {
   };
 
   return {
-    modalName,
     isOpen,
     slideSpec,
     openModal,
