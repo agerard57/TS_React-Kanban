@@ -23,14 +23,12 @@ module.exports = (libs, options) => {
         color: user.color,
       }),
     }).then((res) => ({
-        body: res.json(),
-        status: res.status,
-      })
-    );
+      body: res.json(),
+      status: res.status,
+    }));
   };
 
   createUser();
-  
 
   describe('Test for connection of user', () => {
     it('should return status 200', () => {
@@ -44,8 +42,7 @@ module.exports = (libs, options) => {
         }),
       }).then((response) => {
         assert.equal(response.status, 200);
-      }
-      );
+      });
     });
   });
 };

@@ -78,7 +78,7 @@ export const KanbanCard: FC<CardProps> = ({ card }) => {
           <ColorVignette
             color={card.author.color}
             size={30}
-            first_name={card.author.name.first_name}
+            firstName={card.author.name.firstName}
           />
         </Col>
       </Row>

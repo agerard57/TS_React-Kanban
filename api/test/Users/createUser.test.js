@@ -1,4 +1,3 @@
-
 module.exports = (libs, options) => {
   const { assert, fetch, faker } = libs;
   const { headers, baseUrl } = options;
@@ -59,7 +58,6 @@ module.exports = (libs, options) => {
       assert.equal(response.status, 500);
     });
 
-
     it('should return status 500 if password is not filled', async () => {
       const response = await fetch(`${baseUrl}/user/register`, {
         headers,
@@ -77,6 +75,5 @@ module.exports = (libs, options) => {
 
       assert.equal(response.status, 500);
     });
-
   });
 };
