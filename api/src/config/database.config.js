@@ -17,27 +17,27 @@ if (process.env.LOAD_FIXTURES) {
       const users = [];
       const lists = [];
 
-      // create 5 users
+      // Create 5 users
 
       for (let i = 0; i < 3; i++) {
         const user = User.create({
-          firstname: `User${i}`,
-          surname: `Surname${i}`,
+          firstname: `Name${i+1}`,
+          surname: `Surname${i+1}`,
           color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-          email: `user${i}@gmail.com`,
+          email: `user${i+1}@gmail.com`,
           password: '123456',
         }).then((user) => {
           users.push(user);
           // create 1 list for each user
           List.create({
-            title: `List${i}`,
+            title: `List${i+1}`,
             user_id: user.id,
           }).then((list) => {
             lists.push(list);
             // create 5 cards for each list
             for (let j = 0; j < 4; j++) {
               Card.create({
-                title: `Card${j}`,
+                title: `Card ${`${i+1}-${j+1}`}`,
                 description: `Description${j}`,
                 author_id: users[Math.floor(Math.random() * users.length)].id,
                 edited_by_id: user.id,
