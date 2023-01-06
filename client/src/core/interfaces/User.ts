@@ -2,7 +2,7 @@ import { IBO } from './IBO';
 
 export interface PasswordlessUser extends IBO {
   name: {
-    first_name: string;
+    firstName: string;
     lastName: string;
   };
   email: string;
