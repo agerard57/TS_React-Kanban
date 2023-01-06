@@ -1,0 +1,11 @@
+{
+  "login": {
+    "title": "Se connecter à votre compte",
+    "submit": "Se connecter"
+  },
+  "register": {
+    "title": "Créer un compte",
+    "submit": "Créer",
+    "colorTitle": "Couleur de votre Avatar"
+  }
+}
