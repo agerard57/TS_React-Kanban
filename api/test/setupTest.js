@@ -6,8 +6,8 @@ const headers = {
   'Content-Type': 'application/json',
 };
 const mainUser = {
-  first_name: 'Toby',
-  last_name: 'toto',
+  firstname: 'Toby',
+  surname: 'toto',
   email: 'tutu@gmail.com',
   password: '1234',
   color: '#873260',

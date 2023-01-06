@@ -3,8 +3,8 @@ module.exports = (libs, options) => {
   const { headers, baseUrl } = options;
 
   const user = {
-    first_name: faker.name.firstName(),
-    last_name: faker.name.lastName(),
+    firstname: faker.name.firstName(),
+    surname: faker.name.lastName(),
     email: faker.internet.email().toLowerCase(),
     password: faker.internet.password(),
     color: faker.internet.color(),
@@ -16,8 +16,8 @@ module.exports = (libs, options) => {
       headers,
       method: 'POST',
       body: JSON.stringify({
-        first_name: user.first_name,
-        last_name: user.last_name,
+        firstname: user.firstname,
+        surname: user.surname,
         email: user.email,
         password: user.password,
         color: user.color,

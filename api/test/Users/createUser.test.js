@@ -8,8 +8,8 @@ module.exports = (libs, options) => {
         headers,
         method: 'POST',
         body: JSON.stringify({
-          first_name: faker.name.firstName(),
-          last_name: faker.name.lastName(),
+          firstname: faker.name.firstName(),
+          surname: faker.name.lastName(),
           email: faker.internet.email().toLowerCase(),
           password: faker.internet.password(),
           color: faker.internet.color(),
@@ -27,7 +27,7 @@ module.exports = (libs, options) => {
         headers,
         method: 'POST',
         body: JSON.stringify({
-          last_name: faker.name.lastName(),
+          surname: faker.name.lastName(),
           email: faker.internet.email().toLowerCase(),
           password: faker.internet.password(),
           color: faker.internet.color(),
@@ -45,7 +45,7 @@ module.exports = (libs, options) => {
         headers,
         method: 'POST',
         body: JSON.stringify({
-          first_name: faker.name.firstName(),
+          firstname: faker.name.firstName(),
           email: faker.internet.email().toLowerCase(),
           password: faker.internet.password(),
           color: faker.internet.color(),
@@ -63,8 +63,8 @@ module.exports = (libs, options) => {
         headers,
         method: 'POST',
         body: JSON.stringify({
-          first_name: faker.name.firstName(),
-          last_name: faker.name.lastName(),
+          firstname: faker.name.firstName(),
+          surname: faker.name.lastName(),
           email: faker.internet.email().toLowerCase(),
           color: faker.internet.color(),
         }),

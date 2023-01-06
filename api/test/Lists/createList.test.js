@@ -8,7 +8,7 @@ module.exports = (libs, options) => {
         method: 'POST',
         body: JSON.stringify({
           title: 'Tset',
-          user_id: 0,
+          user_id: 1,
         }),
       }).then((res) => ({
         body: res.json(),
