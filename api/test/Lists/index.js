@@ -1,5 +1,12 @@
-module.exports = () => {
-  const createList = require('./createList.test');
+module.exports = (libs, options) => {
+  const headers = {
+    ...options.headers,
+    Authorization: `Bearer ${options.token}`,
+  };
+  const optionsWithToken = {
+    headers,
+    baseUrl: options.baseUrl,
+  };
 
-  createList();
+  require('./createList.test')(libs, optionsWithToken);
 };
