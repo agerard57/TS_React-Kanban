@@ -10,25 +10,28 @@ const headers = {
 };
 
 const mainTests = () => {
+  const token = fs.readFileSync(
+    './test/cookie/cookie.txt',
+    { encoding: 'utf8', flag: 'r' },
+    (err) => {
+      if (err) throw err;
+      console.log('complete');
+    }
+  );
 
-  const token = fs.readFileSync('./test/cookie/cookie.txt', {encoding:'utf8', flag:'r'}, (err) => {
-    if (err) throw err;
-    console.log('complete');
-  });
-  
   const libs = {
     assert,
     fetch,
     faker,
   };
-  
+
   const options = {
     baseUrl,
     headers,
-    token
+    token,
   };
-  
-  // require('./Users')(libs, options);
+
+  require('./Users')(libs, options);
   require('./Lists')(libs, options);
   // require('./Cards')(libs, options);
 };
