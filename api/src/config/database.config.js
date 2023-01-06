@@ -22,7 +22,7 @@ if (process.env.LOAD_FIXTURES) {
          User.create({
           firstname: `Name${i+1}`,
           surname: `Surname${i+1}`,
-          color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+          color: `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`,
           email: `user${i+1}@gmail.com`,
           password: '123456',
         }).then((user) => {
