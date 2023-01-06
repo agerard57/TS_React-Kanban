@@ -24,6 +24,7 @@ export const AddList: FC = () => {
           text-align: start;
           font-size: 1.3rem;
           font-weight: bold;
+          text-align: center;
         `}
       >
         {t('newList.title')}
