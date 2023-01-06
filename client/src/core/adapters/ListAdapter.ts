@@ -1,12 +1,11 @@
-import { CardDto } from '../dto/CardDto';
-import { ListDto } from '../dto/ListDto';
-import { Card, List } from '../types';
-import { adapteCardDtoToCard } from './CardAdapter';
+import { CardDto, ListDto } from '../dto';
+import { Card, List } from '../interfaces';
+import { adaptCardDtoToCard } from './CardAdapter';
 import { adaptUserDtoToUser } from './UserAdapter';
 
 export const adaptListDtoToList = (listDto: ListDto): List => {
   const cards: Card[] = listDto.card.map((card: CardDto) => {
-    return adapteCardDtoToCard(card);
+    return adaptCardDtoToCard(card);
   });
 
   const list: List = {

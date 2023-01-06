@@ -1,8 +1,8 @@
-import { CardDto } from '../dto/CardDto';
-import { Card } from '../types';
+import { CardDto } from '../dto';
+import { Card } from '../interfaces';
 import { adaptUserDtoToUser } from './UserAdapter';
 
-export const adapteCardDtoToCard = (cardDto: CardDto): Card => {
+export const adaptCardDtoToCard = (cardDto: CardDto): Card => {
   const card: Card = {
     id: cardDto.id,
     title: cardDto.title,
