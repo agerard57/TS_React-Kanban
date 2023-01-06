@@ -2,14 +2,11 @@ import { FC } from 'react';
 import MediaQuery from 'react-responsive';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
+import { LoginPage, RegisterPage } from '../../authPages';
 import { Mobile, Layout } from '../../core';
 import { LandingPage } from '../../landingPage';
 
-/* import { ProtectedRoute } from './ProtectedRoute'; */
-
 const RouteManager: FC = () => {
-  /*   const { isUserLoggedIn, loggedUserData, loading } = useRouteManager(); */
-
   return (
     <Router>
       <MediaQuery maxDeviceWidth={1224}>
@@ -19,16 +16,9 @@ const RouteManager: FC = () => {
         <Layout>
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
-
             <Route path="/home" element={<LandingPage />} />
-            {/*               <Route
-                path="/user/"
-                element={
-                  <ProtectedRoute isAllowed={isUserLoggedIn}>
-                    <ProfilePage loggedUserData={loggedUserData} />
-                  </ProtectedRoute>
-                }
-              /> */}
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </Layout>
       </MediaQuery>

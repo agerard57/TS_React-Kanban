@@ -1,1 +1,0 @@
-export { isLanguageCode } from './isLanguageCode';

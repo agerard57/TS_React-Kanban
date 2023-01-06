@@ -3,10 +3,11 @@ import { css } from '@emotion/react';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { TextInput } from '../../core';
+import { Inputs } from '../../core';
 
 export const AddList: FC = () => {
   const { t } = useTranslation('LandingPage');
+
   return (
     <div
       css={css`
@@ -24,6 +25,7 @@ export const AddList: FC = () => {
           text-align: start;
           font-size: 1.3rem;
           font-weight: bold;
+          text-align: center;
         `}
       >
         {t('newList.title')}
@@ -36,7 +38,7 @@ export const AddList: FC = () => {
           margin: 1vw 0;
         `}
       >
-        <TextInput placeholder={t('newList.placeholder')} />
+        <Inputs.Text placeholder={t('newList.placeholder')} />
       </div>
     </div>
   );

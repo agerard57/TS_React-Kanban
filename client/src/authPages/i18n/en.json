@@ -1,0 +1,17 @@
+{
+  "login": {
+    "title": "Login to your account",
+    "submit": "Login"
+  },
+  "register": {
+    "title": "Register for an account",
+    "submit": "Register",
+    "colorTitle": "Color of the avatar"
+  },
+  "placeholder": {
+    "email": "Email",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "password": "Password"
+  }
+}

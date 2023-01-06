@@ -14,7 +14,7 @@
     },
     {
       "name": "Database",
-      "path": "./database"
+      "path": "./db"
     },
     {
       "name": "Server",

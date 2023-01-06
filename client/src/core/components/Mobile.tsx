@@ -26,7 +26,7 @@ export const Mobile: FC = () => {
         opacity: 0;
         animation: fadein 1.5s;
         animation-fill-mode: forwards;
-        animation-delay: 0.5s; /* no spinner flickering for fast load times */
+        animation-delay: 0.5s;
         @keyframes fadein {
           from {
             visibility: visible;
