@@ -43,7 +43,8 @@ export const LandingPage: FC = () => {
         {
           id: 1,
           title: 'CardTitle 1',
-          description: 'CardDescription 1',
+          description:
+            'As a user, I want to be able to create a new board, so that I can manage my tasks. ',
           author: author2,
           listId: 1
         },
