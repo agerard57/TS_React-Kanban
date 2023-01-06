@@ -45,7 +45,7 @@ module.exports = sequelize.define('user', {
     validate: {
       // We require usernames to have length of at least 3, and
       // only use letters, numbers and underscores.
-      is: /^#[0-9A-Fa-f]{6}$/i,
+      is: /^#[0-9A-F]{6}$/i,
     },
   },
 });
