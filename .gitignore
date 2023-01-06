@@ -45,3 +45,5 @@ jspm_packages
 
 # ignore lock files
 *.lock
+
+.env
