@@ -1,13 +1,12 @@
-import axios from 'axios';
+import { adaptListDtoToList } from '../adapters';
+import { ListDto } from '../dto';
+import { List } from '../interfaces';
+import { publicAxios } from './publicAxios.service';
 
-import { adaptListDtoToList } from '../adapters/ListAdapter';
-import { ListDto } from '../dto/ListDto';
-import { List } from '../types';
-
-export const getAll: () => Promise<List[]> = async () => {
+export const getAllLists: () => Promise<List[]> = async () => {
   const url = 'http://localhost:3001/lists/details';
 
-  const response = await axios.get(url);
+  const response = await publicAxios.get(url);
   const data = response.data as ListDto[];
   const lists = [] as List[];
 

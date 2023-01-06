@@ -1,0 +1,1 @@
+export { adaptListDtoToList } from './ListAdapter';

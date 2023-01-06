@@ -3,7 +3,9 @@ import { css } from '@emotion/react';
 import { FC } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import { Card } from '../../types';
+import { CardDetailsModalBuilder } from '../../../cardDetailsModal';
+import { useModal } from '../../../modal';
+import { Card } from '../../interfaces';
 import { ColorVignette } from '../ColorVignette';
 
 type CardProps = {
@@ -11,6 +13,12 @@ type CardProps = {
 };
 
 export const KanbanCard: FC<CardProps> = ({ card }) => {
+  const { openModal } = useModal();
+
+  const { screen } = CardDetailsModalBuilder(card);
+
+  const handleClick = () => openModal(screen);
+
   return (
     <Row
       css={css`
@@ -22,9 +30,16 @@ export const KanbanCard: FC<CardProps> = ({ card }) => {
         box-shadow: 0 0 5px 0px #0000001c;
         display: flex;
         justify-content: center;
-        min-width: 20vw;
-        max-width: 23vw;
+        min-width: 18vw;
+        max-width: 20vw;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.02);
+          transition: transform 0.2s ease-in-out;
+        }
       `}
+      onClick={handleClick}
     >
       <Row>
         <h3
