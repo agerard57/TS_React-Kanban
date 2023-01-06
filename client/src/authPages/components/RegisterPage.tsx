@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { CirclePicker } from 'react-color';
 import { useTranslation } from 'react-i18next';
 
-import { TextInput, usePageTitle } from '../../core';
+import { Inputs, usePageTitle } from '../../core';
 import { Button } from '../../core/components';
 
 export const RegisterPage = () => {
@@ -38,10 +38,10 @@ export const RegisterPage = () => {
       >
         {t('register.title')}
       </h1>
-      <TextInput placeholder="email" />
-      <TextInput placeholder="nom" />
-      <TextInput placeholder="prenom" />
-      <TextInput placeholder="password" inputType="password" />
+      <Inputs.Text placeholder={t('placeholder.email')} />
+      <Inputs.Text placeholder={t('placeholder.lastName')} />
+      <Inputs.Text placeholder={t('placeholder.firstName')} />
+      <Inputs.Text placeholder={t('placeholder.password')} inputType="password" />
       <p
         css={css`
           font-size: 1rem;
@@ -64,7 +64,9 @@ export const RegisterPage = () => {
             margin: auto;
           `}
           color={color}
-          onChangeComplete={(colorValue) => setColor(colorValue.hex)}
+          onChangeComplete={(colorValue: { hex: SetStateAction<string> }) =>
+            setColor(colorValue.hex)
+          }
         />
       </div>
       <Button type="primary" buttonType="submit">

@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import { TextInput, usePageTitle } from '../../core';
+import { Inputs, usePageTitle } from '../../core';
 import { Button } from '../../core/components';
 
 export const LoginPage = () => {
@@ -35,8 +35,8 @@ export const LoginPage = () => {
       >
         {t('login.title')}
       </h1>
-      <TextInput placeholder="email" />
-      <TextInput placeholder="password" inputType="password" />
+      <Inputs.Text placeholder={t('placeholder.email')} />
+      <Inputs.Text placeholder={t('placeholder.password')} inputType="password" />
       <Button type="primary" buttonType="submit">
         {t('login.submit')}
       </Button>
