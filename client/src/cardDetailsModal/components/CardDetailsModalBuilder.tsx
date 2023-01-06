@@ -4,18 +4,24 @@ import { FC } from 'react';
 import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
+import { Card } from '../../core';
 import { SlideSpec } from '../../modal';
 import { useCardDetailsModalBuilder } from '../hooks';
+import { CardDetailsModal } from './CardDetailsModal';
 
-export const CardDetailsModalBuilder = (): SlideSpec => {
+type CardDetailsModalBuilderManager = (card: Card) => {
+  screen: SlideSpec;
+};
+
+export const CardDetailsModalBuilder: CardDetailsModalBuilderManager = (card) => {
   const { t } = useTranslation('CardDetailsModal');
 
   useCardDetailsModalBuilder();
 
   const screen: SlideSpec = {
-    content: <FirstMessage />,
-    closeButtonText: t('page.0.nextButtonText').toString()
+    content: <CardDetailsModal card={card} />,
+    closeButtonText: t('closeButton').toString()
   };
 
-  return screen;
+  return { screen };
 };
