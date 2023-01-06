@@ -2,9 +2,7 @@ const listController = require('../controllers/list.controller');
 const authMiddleware = require('../middleware/auth.middleware');
 
 module.exports = (app) => {
-  app
-    .route('/lists/details')
-    .get(listController.getAllWithDetails);
+  app.route('/lists/details').get(listController.getAllWithDetails);
 
   app
     .route('/lists')

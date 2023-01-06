@@ -4,10 +4,9 @@ import { FC } from 'react';
 import { Button, Navbar as BootstrapNavbar } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import { LanguageCode } from '../../language';
+import { LanguageCode, useLanguage } from '../../language';
 import { ReactComponent as EnglishFlag } from '../assets/EnglishFlag.svg';
 import { ReactComponent as FrenchFlag } from '../assets/FrenchFlag.svg';
-import { useLanguage } from '../language';
 
 export const Navbar: FC = () => {
   const { t } = useTranslation('Core');
