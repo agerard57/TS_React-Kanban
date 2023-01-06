@@ -65,6 +65,7 @@ The case starts when the customer clicks on _Create_.
 ### II. Consulting a card
 
 ![env](./media/Kanban_UserCase_Read_Card.jpg)
+
 ![env](./media/Kanban_UserCase_Read_List.jpg)
 
 > Actor. **User**
@@ -91,7 +92,8 @@ The user has chosen to modify the information of the card. Triggers the _edit a 
 
 ### III. Registration of a user
 
-![env](./media/Kanban_UserCase_SaveUSer.jpg)
+![env](./media/Kanban_UserCase_SaveUser.jpg)
+
 ![env](./media/Kanban_UserCase_Sign.jpg)
 
 > Actor. **User**
