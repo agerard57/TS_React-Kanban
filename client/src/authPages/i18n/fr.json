@@ -7,5 +7,11 @@
     "title": "Créer un compte",
     "submit": "Créer",
     "colorTitle": "Couleur de votre Avatar"
+  },
+  "placeholder": {
+    "email": "Email",
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "password": "Mot de passe"
   }
 }
