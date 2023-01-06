@@ -4,3 +4,4 @@ export { Mobile } from './Mobile';
 export { KanbanList } from './kanban';
 export { Navbar } from './Navbar';
 export { TextInput } from './TextInput';
+export { Button } from './Button';
