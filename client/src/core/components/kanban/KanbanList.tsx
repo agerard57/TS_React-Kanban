@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 import { FC } from 'react';
 
-import { List } from '../../types';
+import { List } from '../../interfaces';
 import { KanbanCard } from './KanbanCard';
 
 type ListProps = {
