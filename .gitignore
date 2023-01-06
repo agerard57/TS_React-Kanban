@@ -46,5 +46,8 @@ jspm_packages
 # ignore lock files
 *.lock
 
+# ignore env files
+.env
+
 # ignore temp test file
 api/test/cookie/cookie.txt

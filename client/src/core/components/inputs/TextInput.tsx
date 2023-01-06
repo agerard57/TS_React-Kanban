@@ -4,9 +4,10 @@ import { FC } from 'react';
 
 type Props = {
   placeholder: string;
+  inputType?: string;
 };
 
-export const TextInput: FC<Props> = ({ placeholder }) => (
+export const TextInput: FC<Props> = ({ placeholder, inputType }) => (
   <input
     css={css`
       width: 100%;
@@ -15,11 +16,12 @@ export const TextInput: FC<Props> = ({ placeholder }) => (
       border: 1px solid #0000001c;
       font-size: 1rem;
       font-weight: bold;
+      margin: 0.5rem 0;
       &:focus {
         outline: none;
       }
     `}
-    type="text"
+    type={inputType ?? 'text'}
     placeholder={placeholder}
   />
 );
