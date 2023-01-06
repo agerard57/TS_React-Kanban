@@ -15,6 +15,7 @@
       - [Main Scenario](#main-scenario-1)
       - [Alternative Scenario](#alternative-scenario)
   - [Sequence diagrams](#sequence-diagrams)
+  - [Architecture](#architecture)
 
 ## Database modeling
 
@@ -64,6 +65,7 @@ The case starts when the customer clicks on _Create_.
 ### II. Consulting a card
 
 ![env](./media/Kanban_UserCase_Read_Card.jpg)
+
 ![env](./media/Kanban_UserCase_Read_List.jpg)
 
 > Actor. **User**
@@ -90,7 +92,8 @@ The user has chosen to modify the information of the card. Triggers the _edit a 
 
 ### III. Registration of a user
 
-![env](./media/Kanban_UserCase_SaveUSer.jpg)
+![env](./media/Kanban_UserCase_SaveUser.jpg)
+
 ![env](./media/Kanban_UserCase_Sign.jpg)
 
 > Actor. **User**
@@ -122,3 +125,157 @@ The case starts when the client clicks on _register_
 ![env](./media/Creation_sequence_diagram.jpg)
 
 ![env](./media/inscription_sequence_diagram.jpg)
+
+## Architecture
+
+```tree
+📦
+├─ .github
+│  └─ workflows
+│     ├─ api-checks.yml
+│     ├─ build.yml
+│     └─ client-checks.yml
+├─ .gitignore
+├─ .nvmrc
+├─ .vscode
+│  └─ settings.json
+├─ LICENSE
+├─ README.md
+├─ api
+│  ├─ .eslintignore
+│  ├─ .eslintrc.js
+│  ├─ .prettierignore
+│  ├─ .prettierrc
+│  ├─ .vscode
+│  │  └─ settings.json
+│  ├─ example.env
+│  ├─ index.js
+│  ├─ jest.config.js
+│  ├─ package.json
+│  ├─ src
+│  │  ├─ config
+│  │  │  └─ ...
+│  │  ├─ controllers
+│  │  │  └─ ...
+│  │  ├─ factory
+│  │  │  └─ ...
+│  │  ├─ middleware
+│  │  │  └─ ...
+│  │  ├─ models
+│  │  │  ├─ ...
+│  │  ├─ routes
+│  │  │  └─ ...
+│  │  ├─ services
+│  │  │  └─ ...
+│  │  └─ utils
+│  │     └─ ...
+│  └─ test
+│     ├─ Cards
+│     │  └─ ...
+│     ├─ Lists
+│     │  └─ ...
+│     ├─ Users
+│     │  └─ ...
+│     ├─ cookie
+│     │  └─ .gitkeep
+│     ├─ index.js
+│     └─ setupTest.js
+├─ client
+│  ├─ .eslintignore
+│  ├─ .eslintrc
+│  ├─ .gitignore
+│  ├─ .prettierrc
+│  ├─ assetsTransformer.js
+│  ├─ babel.config.js
+│  ├─ config
+│  │  ├─ env.js
+│  │  ├─ getHttpsConfig.js
+│  │  ├─ jest
+│  │  │  └─ ...
+│  │  ├─ modules.js
+│  │  ├─ paths.js
+│  │  ├─ pnpTs.js
+│  │  ├─ webpack.config.js
+│  │  └─ webpackDevServer.config.js
+│  ├─ example.env
+│  ├─ jest.config.js
+│  ├─ jest.setup.js
+│  ├─ package.json
+│  ├─ public
+│  │  └─ ...
+│  ├─ scripts
+│  │  └─ ...
+│  ├─ src
+│  │  ├─ App.css
+│  │  ├─ App.test.tsx
+│  │  ├─ App.tsx
+│  │  ├─ authPages
+│  │  │  ├─ components
+│  │  │  │  └─ ...
+│  │  │  ├─ i18n
+│  │  │  │  └─ ...
+│  │  │  └─ index.ts
+│  │  ├─ cardDetailsModal
+│  │  │  ├─ components
+│  │  │  │  └─ ...
+│  │  │  ├─ hooks
+│  │  │  │  └─ ...
+│  │  │  ├─ i18n
+│  │  │  │  └─ ...
+│  │  │  ├─ index.ts
+│  │  │  ├─ interfaces
+│  │  │  │  └─ ...
+│  │  │  └─ services
+│  │  │     └─ ...
+│  │  ├─ core
+│  │  │  ├─ adapters
+│  │  │  │  └─ ...
+│  │  │  ├─ assets
+│  │  │  │  └─ ...
+│  │  │  ├─ components
+│  │  │  │  └─ ...
+│  │  │  ├─ dto
+│  │  │  │  └─ ...
+│  │  │  ├─ fonts
+│  │  │  │  └─ ...
+│  │  │  ├─ hooks
+│  │  │  │  └─ ...
+│  │  │  ├─ i18n
+│  │  │  │  └─ ...
+│  │  │  ├─ index.ts
+│  │  │  ├─ interfaces
+│  │  │  │  └─ ...
+│  │  │  └─ services
+│  │  │     └─ ...
+│  │  ├─ i18n
+│  │  │  ├─ i18n.ts
+│  │  │  ├─ index.ts
+│  │  │  └─ resources.ts
+│  │  ├─ index.css
+│  │  ├─ index.tsx
+│  │  ├─ landingPage
+│  │  │  └─ ...
+│  │  ├─ language
+│  │  │  └─ ...
+│  │  ├─ logo.svg
+│  │  ├─ modal
+│  │  │  └─ ...
+│  │  ├─ react-app-env.d.ts
+│  │  ├─ reportWebVitals.ts
+│  │  ├─ routeManager
+│  │  │  ├─ components
+│  │  │  │  ├─ ...
+│  │  │  │  └─ index.ts
+│  │  │  └─ index.ts
+│  │  └─ setupTests.ts
+│  └─ tsconfig.json
+├─ docs
+│  ├─ FUNCTIONAL_DOCUMENTATION.md
+│  └─ media
+│     └─ ...
+├─ package.json
+├─ scripts
+│  └─ ...
+├─ sonar-project.properties
+└─ ts-kanban.code-workspace
+```

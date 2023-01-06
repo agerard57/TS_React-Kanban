@@ -1,8 +1,8 @@
 {
   "navbar": {
     "title": "Kanban",
-    "loggedAs": "Connecté en tant que {{username}}",
-    "logout": "Déconnexion"
+    "login": "Se connecter",
+    "register": "Créer un compte"
   },
 
   "mobilePage": {

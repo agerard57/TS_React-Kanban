@@ -31,6 +31,7 @@ export const Button: FC<Props> = ({
             border: 2px solid ${disabled ? '8d8d8d' : '#408cff'};
             border-radius: 18px;
             height: 50px;
+            width: 12rem;
             padding: 2px;
             background-clip: content-box;
             cursor: ${disabled ? 'not-allowed' : 'pointer'};

@@ -53,7 +53,7 @@ exports.patch = (model, objectName) => (req, res) => {
       },
     })
     .then((object) => {
-      if (object === 1) {
+      if (object) {
         res.status(200).json({
           message: `Your ${objectName} has been updated!`,
         });

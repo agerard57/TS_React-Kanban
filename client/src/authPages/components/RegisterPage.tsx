@@ -14,6 +14,9 @@ export const RegisterPage = () => {
 
   usePageTitle(t('register.title'));
 
+  const onChangeCompleteHandler = (colorValue: { hex: SetStateAction<string> }) =>
+    setColor(colorValue.hex);
+
   return (
     <Container
       css={css`
@@ -64,9 +67,7 @@ export const RegisterPage = () => {
             margin: auto;
           `}
           color={color}
-          onChangeComplete={(colorValue: { hex: SetStateAction<string> }) =>
-            setColor(colorValue.hex)
-          }
+          onChangeComplete={onChangeCompleteHandler}
         />
       </div>
       <Button type="primary" buttonType="submit">

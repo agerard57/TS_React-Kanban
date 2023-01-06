@@ -28,6 +28,9 @@ const setupTest = () => {
   const setTokenInFile = (data) => {
     const fs = require('fs');
 
+    if (!fs.existsSync('./test/cookie')) {
+      fs.mkdirSync('./test/cookie');
+    }
     fs.writeFile('./test/cookie/cookie.txt', data, 'utf8', (err) => {
       if (err) throw err;
       console.log('complete');

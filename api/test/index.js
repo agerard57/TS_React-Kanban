@@ -33,7 +33,6 @@ const mainTests = () => {
 
   require('./Users')(libs, options);
   require('./Lists')(libs, options);
-  // require('./Cards')(libs, options);
 };
 
 mainTests();

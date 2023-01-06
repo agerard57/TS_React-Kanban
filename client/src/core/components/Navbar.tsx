@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { FC } from 'react';
 import { Button, Navbar as BootstrapNavbar } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 import { LanguageCode, useLanguage } from '../../language';
 import { ReactComponent as EnglishFlag } from '../assets/EnglishFlag.svg';
@@ -11,9 +12,14 @@ import { ReactComponent as FrenchFlag } from '../assets/FrenchFlag.svg';
 export const Navbar: FC = () => {
   const { t } = useTranslation('Core');
   const { language, change } = useLanguage();
+  const navigate = useNavigate();
 
   const handleLanguageChange = (newLanguage: LanguageCode) => () => {
     change(newLanguage);
+  };
+
+  const handleNavigate = (path: string) => () => {
+    navigate(path);
   };
 
   return (
@@ -50,10 +56,17 @@ export const Navbar: FC = () => {
         />
       </div>
       <BootstrapNavbar.Brand
+        onClick={handleNavigate('/')}
         css={css`
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
+          cursor: pointer;
+          transition: transform 0.2s ease-in-out;
+
+          &:hover {
+            transform: translateX(-50%) scale(1.1);
+          }
         `}
       >
         {t('navbar.title')}
@@ -69,10 +82,18 @@ export const Navbar: FC = () => {
           }
         `}
       >
-        <BootstrapNavbar.Text>
-          {t('navbar.loggedAs', { username: 'Mark Otto' })}
-        </BootstrapNavbar.Text>
-        <Button variant="outline-light">{t('navbar.logout')}</Button>
+        <Button
+          variant="outline-light"
+          onClick={handleNavigate('/login')}
+          css={css`
+            margin: 0 0.5rem;
+          `}
+        >
+          {t('navbar.login')}
+        </Button>
+        <Button variant="outline-light" onClick={handleNavigate('/register')}>
+          {t('navbar.register')}
+        </Button>
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>
   );
