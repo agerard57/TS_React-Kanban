@@ -29,7 +29,7 @@ const cardModel = sequelize.define(
       references: {
         model: 'user',
         key: 'id',
-      }
+      },
     },
     edited_by_id: {
       type: DataTypes.INTEGER,
@@ -37,7 +37,7 @@ const cardModel = sequelize.define(
       references: {
         model: 'user',
         key: 'id',
-      }
+      },
     },
     list_id: {
       type: DataTypes.INTEGER,
