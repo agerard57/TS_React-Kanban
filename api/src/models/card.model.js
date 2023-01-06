@@ -13,7 +13,7 @@ const cardModel = sequelize.define(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
