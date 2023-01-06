@@ -5,6 +5,7 @@ import { I18nextProvider } from 'react-i18next';
 
 import './App.css';
 import { i18n } from './i18n';
+import { ModalProvider } from './modal';
 import RouteManager from './routeManager';
 
 const App: React.FC = () => (
@@ -18,7 +19,9 @@ const App: React.FC = () => (
         duration: 5000
       }}
     />
-    <RouteManager />
+    <ModalProvider>
+      <RouteManager />
+    </ModalProvider>
   </I18nextProvider>
 );
 
