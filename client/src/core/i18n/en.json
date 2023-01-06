@@ -1,8 +1,8 @@
 {
   "navbar": {
     "title": "Kanban",
-    "loggedAs": "Logged in as {{username}}",
-    "logout": "Logout"
+    "login": "Login",
+    "register": "Register"
   },
 
   "mobilePage": {
