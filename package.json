@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "start": "concurrently \"yarn workspace api start\" \"yarn workspace client start\"",
-    "tests": "concurrently \"yarn workspace client test\"",
+    "tests": "concurrently \"yarn workspace api tests\" \"yarn workspace client test\"",
     "checks": "concurrently \"yarn workspace client checks\" \"yarn workspace api checks\""
   },
   "repository": {
