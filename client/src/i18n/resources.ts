@@ -1,3 +1,4 @@
+import { i18n as AuthPages } from '../authPages';
 import { i18n as CardDetailsModal } from '../cardDetailsModal';
 import { i18n as Core } from '../core';
 import { i18n as LandingPage } from '../landingPage';
@@ -15,8 +16,9 @@ const normalize = (modules: Modules, formatNamespace: (name: string) => string =
   );
 
 const moduleResources = normalize({
-  Core,
+  AuthPages,
   CardDetailsModal,
+  Core,
   LandingPage
 });
 
