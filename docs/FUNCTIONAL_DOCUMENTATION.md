@@ -15,6 +15,7 @@
       - [Main Scenario](#main-scenario-1)
       - [Alternative Scenario](#alternative-scenario)
   - [Sequence diagrams](#sequence-diagrams)
+  - [Sonar analysis](#sonar-analysis)
   - [Architecture](#architecture)
 
 ## Database modeling
@@ -125,6 +126,10 @@ The case starts when the client clicks on _register_
 ![env](./media/Creation_sequence_diagram.jpg)
 
 ![env](./media/inscription_sequence_diagram.jpg)
+
+## Sonar analysis
+
+https://sonarcloud.io/summary/overall?id=agerard57_TS_React-Kanban
 
 ## Architecture
 
