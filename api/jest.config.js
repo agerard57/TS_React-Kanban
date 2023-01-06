@@ -1,8 +1,7 @@
 const config = {
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js)$": "babel-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js)$': 'babel-jest',
   },
-  transformIgnorePatterns: [
-  ],
-}
+  transformIgnorePatterns: [],
+};

@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { KanbanList, List } from '../../core';
-import { getAll } from '../../core/services/list.service';
+import { KanbanList, List, getAllLists } from '../../core';
 import { useLandingPage } from '../hooks';
 import { AddList } from './AddList';
 import { UserList } from './UserList';
@@ -14,16 +13,13 @@ export const LandingPage: FC = () => {
 
   useLandingPage();
 
-  let lists: List[] = [];
+  const [lists, setLists] = useState<List[] | []>([]);
 
-  getAll()
-    .then((listsArray: List[]) => {
-      console.log('lists : ', listsArray);
-      lists = listsArray;
-    })
-    .catch((err) => {
-      console.log(err);
+  useEffect(() => {
+    getAllLists().then((res) => {
+      setLists(res);
     });
+  }, []);
 
   return (
     <>
