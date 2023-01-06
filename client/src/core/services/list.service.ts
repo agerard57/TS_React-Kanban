@@ -4,7 +4,7 @@ import { List } from '../interfaces';
 import { publicAxios } from './publicAxios.service';
 
 export const getAllLists: () => Promise<List[]> = async () => {
-  const url = 'http://localhost:3001/lists/details';
+  const url = `${process.env.REACT_APP_API_URL}/lists/details`;
 
   const response = await publicAxios.get(url);
   const data = response.data as ListDto[];

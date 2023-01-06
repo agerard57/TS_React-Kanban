@@ -6,11 +6,7 @@ import { LoginPage, RegisterPage } from '../../authPages';
 import { Mobile, Layout } from '../../core';
 import { LandingPage } from '../../landingPage';
 
-/* import { ProtectedRoute } from './ProtectedRoute'; */
-
 const RouteManager: FC = () => {
-  /*   const { isUserLoggedIn, loggedUserData, loading } = useRouteManager(); */
-
   return (
     <Router>
       <MediaQuery maxDeviceWidth={1224}>
@@ -23,15 +19,6 @@ const RouteManager: FC = () => {
             <Route path="/home" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-
-            {/*               <Route
-                path="/user/"
-                element={
-                  <ProtectedRoute isAllowed={isUserLoggedIn}>
-                    <ProfilePage loggedUserData={loggedUserData} />
-                  </ProtectedRoute>
-                }
-              /> */}
           </Routes>
         </Layout>
       </MediaQuery>

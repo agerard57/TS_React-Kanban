@@ -11,8 +11,7 @@ export const modalStyles = (isOpen: boolean) => {
   }, 400);
 
   const animation = isOpen
-    ? // Opcaity
-      css`
+    ? css`
         animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         @keyframes fade-in {
           0% {
