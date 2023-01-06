@@ -10,6 +10,8 @@ export const modalStyles = (isOpen: boolean) => {
     display = true;
   }, 400);
 
+  const isDisplayed = display ? '' : 'display: none;';
+
   const animation = isOpen
     ? css`
         animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -23,7 +25,7 @@ export const modalStyles = (isOpen: boolean) => {
         }
       `
     : css`
-        ${display ? '' : 'display: none;'}
+        ${isDisplayed}
         animation: fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         @keyframes fade-out {
           0% {

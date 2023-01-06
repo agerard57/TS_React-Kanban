@@ -15,12 +15,11 @@ if (process.env.LOAD_FIXTURES) {
       const List = require('../models/list.model');
 
       const users = [];
-      const lists = [];
 
       // Create 5 users
 
       for (let i = 0; i < 3; i++) {
-        const user = User.create({
+         User.create({
           firstname: `Name${i+1}`,
           surname: `Surname${i+1}`,
           color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
@@ -33,11 +32,10 @@ if (process.env.LOAD_FIXTURES) {
             title: `List${i+1}`,
             user_id: user.id,
           }).then((list) => {
-            lists.push(list);
             // create 5 cards for each list
             for (let j = 0; j < 4; j++) {
               Card.create({
-                title: `Card ${`${i+1}-${j+1}`}`,
+                title: `Card ${i+1}-${j+1}`,
                 description: `Description${j}`,
                 author_id: users[Math.floor(Math.random() * users.length)].id,
                 edited_by_id: user.id,
